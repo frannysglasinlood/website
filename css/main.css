@@ -1,0 +1,319 @@
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+body {
+    font-size: 100%;
+    margin: 0 auto;
+    min-width: 670px;
+    max-width: 1000px;
+    background-color: #fff;
+    font: normal normal normal 14px normal Arial, Helvetica, sans-serif;
+}
+/* Main */
+
+@font-face{
+
+font-weight:normal;
+ font-family:GreatVibes;
+ src:url("/f/GreatVibes.woff") format("woff"),
+url("/f/GreatVibes.ttf") format("truetype"),
+url("/f/GreatVibes.svg") format("svg");
+
+}
+section {
+    text-align: center;
+}
+article {
+    margin: 1em;
+}
+footer {
+    clear: both;
+    color: #525252;
+    font-size: 0.9em;
+}
+/* Navigation */
+
+nav {
+    padding: 65px 0;
+    float: left;
+    font-size: 1.4em;
+}
+nav ul {
+    list-style: none;
+}
+nav li {
+    float: left;
+    border-right: 2px solid #525252;
+}
+nav li a {
+    float: left;
+    color: #1a1a1a;
+    padding: 10px;
+}
+nav li.active a {
+    color: #54ba00;
+}
+nav li:last-child {
+    border-right: none;
+}
+nav li a:hover,
+nav li a:focus,
+nav li a:active {
+    background-color: #67a624;
+    color: #fff;
+}
+
+nav li:hover,
+nav li:focus,
+nav li:active {
+    border-right: 2px solid #67a624;
+}
+
+/* Selectors */
+
+h1,
+h2 {
+    display: inline;
+    text-align: center;
+    font: normal normal normal 70px normal GreatVibes, sans-serif;
+    font-family: GreatVibes, sans-serif;
+    display: block;
+    margin: 0;
+}
+h1 {
+    color: #1a1a1a;
+    padding-left: 5px;
+}
+h2 {
+    color: #54ba00;
+    padding-right: 5px;
+}
+p:first-letter {
+    font-family: GreatVibes, sans-serif;
+    font-size: 2.2em;
+}
+p {
+    margin: 1em 0;
+}
+a {
+    color: #1a1a1a;
+    text-decoration: none;
+}
+small {
+    margin-left: 1.3em;
+}
+/* IDs */
+
+#logo {
+    height: 150px;
+    width: 150px;
+    float: left;
+    margin: 10px 0 10px 10px;
+}
+#showcase {
+    width: 100%;
+}
+#mailico {
+    padding: 15px 10px 10px 70px;
+    background: url("/i/mail.png") 0 40% no-repeat;
+    margin: 1em 0;
+}
+#phoneico {
+    padding: 15px 10px 10px 70px;
+    background: url("/i/phone.png") 0 40% no-repeat;
+}
+/* Classes */
+
+.clearfix {
+    clear: both;
+}
+.medium {
+    width: 300px;
+    height: 225px;
+}
+hr {
+    height: 2px;
+    border: 0;
+    border-style: none;
+    background: #525252;
+}
+.greenHr {
+    height: 4px;
+    border: 0;
+    border-style: none;
+    background: #67a624;
+}
+.contacticons {
+    float: left;
+    margin: 10px 10px 0 0;
+    width: 64px;
+    height: 64px;
+}
+.externallink {
+  border-bottom: 1px solid #525252;
+  font-weight: bold;
+}
+/* Portfolio */
+
+.slidesback {
+    position: relative;
+    bottom: 250px;
+    z-index: 10;
+    float: left;
+    width: 28px;
+    height: 27px;
+    background-image: url("/i/navbuttons.gif");
+    background-position: 0px 0px;
+    text-indent: -2000px;
+}
+a.slidesback:hover,
+a.slidesback:active {
+    background-position: 0px -27px;
+}
+.slidesnext {
+    position: relative;
+    bottom: 250px;
+    z-index: 10;
+    float: right;
+    width: 28px;
+    height: 27px;
+    background-image: url("i/navbuttons.gif");
+    background-position: 28px 0px;
+    text-indent: -2000px;
+}
+a.slidesnext:hover,
+a.slidesnext:active {
+    background-image: 28px -27px;
+}
+
+#slides img {
+    width: 100%;
+}
+
+/* Thumbgrid */
+
+.thumbgrid {
+    margin: 0 auto;
+    width: 640px;
+}
+figure {
+    float: left;
+    margin: 10px;
+    padding: 5px;
+    width: 45%;
+}
+figcaption {
+    text-align: center;
+    font-size: 1em;
+}
+figure img {
+    border: 2px solid #525252;
+}
+/* Lightbox */
+
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    background: rgba(0, 0, 0, 0.7);
+    text-align: center;
+}
+.lightbox img {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #fff;
+    opacity: 0;
+    transition: all 0.7s ease;
+}
+.lightbox:target {
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: auto;
+}
+.lightbox:target img {
+    margin-top: 10%;
+    opacity: 1;
+}
+/* Responsive */
+
+@media (max-width: 800px) {
+    .lightbox:target img {
+        margin-top: 1%;
+        opacity: 1;
+    }
+}
