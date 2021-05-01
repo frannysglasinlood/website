@@ -1,7 +1,8 @@
 var gulp = require('gulp'),
     minifyHTML = require('gulp-minify-html'),
     minifyCSS = require('gulp-minify-css'),
-    uglify = require('gulp-uglify');
+    uglify = require('gulp-uglify'),
+    imagemin = require('gulp-imagemin');
 
 gulp.task('html', function () {
     return gulp.src('*.html')
@@ -25,11 +26,13 @@ gulp.task('js', function () {
 
 gulp.task('img', function () {
     return gulp.src('./i/*')
+        .pipe(imagemin())
         .pipe(gulp.dest('./dist/i/'));
 });
 
 gulp.task('img:portfolio', function () {
     return gulp.src('./p/*')
+        .pipe(imagemin())
         .pipe(gulp.dest('./dist/p/'));
 });
 
