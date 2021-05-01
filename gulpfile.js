@@ -41,4 +41,4 @@ gulp.task('fonts', function () {
         .pipe(gulp.dest('./dist/f/'));
 });
 
-gulp.task('default', gulp.parallel(['html', 'css', 'js', 'img', 'fonts']));
+gulp.task('default', gulp.parallel(['html', 'css', 'js', 'img', 'img:portfolio', 'fonts']));
