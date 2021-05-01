@@ -4,7 +4,7 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify');
 
 gulp.task('html', function () {
-    gulp.src('*.html')
+    return gulp.src('*.html')
         .pipe(minifyHTML({
             quotes: true
         }))
@@ -12,27 +12,30 @@ gulp.task('html', function () {
 });
 
 gulp.task('css', function () {
-    gulp.src('./css/*.css')
+    return gulp.src('./css/*.css')
         .pipe(minifyCSS())
         .pipe(gulp.dest('./dist/css/'));
 });
 
 gulp.task('js', function () {
-    gulp.src('./js/*.js')
+    return gulp.src('./js/*.js')
         .pipe(uglify())
         .pipe(gulp.dest('./dist/js/'));
 });
 
 gulp.task('img', function () {
-    gulp.src('./i/*')
+    return gulp.src('./i/*')
         .pipe(gulp.dest('./dist/i/'));
-    gulp.src('./p/*')
+});
+
+gulp.task('img:portfolio', function () {
+    return gulp.src('./p/*')
         .pipe(gulp.dest('./dist/p/'));
 });
 
 gulp.task('fonts', function () {
-    gulp.src('./f/*')
+    return gulp.src('./f/*')
         .pipe(gulp.dest('./dist/f/'));
 });
 
-gulp.task('default', ['html', 'css', 'js', 'img', 'fonts']);
+gulp.task('default', gulp.parallel(['html', 'css', 'js', 'img', 'fonts']));
